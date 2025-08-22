@@ -9,7 +9,7 @@ def save_to_excel(data):
 
     if os.path.exists(filename):
         try:
-            existing_df = pd.read_excel(filename)  # ✅ load as DataFrame
+            existing_df = pd.read_excel(filename, Sheet1=None)  # ✅ load as DataFrame
             new_df = pd.concat([existing_df, pd.DataFrame([data])], ignore_index=True)
         except Exception as e:
             print("Error reading existing file:", e)
