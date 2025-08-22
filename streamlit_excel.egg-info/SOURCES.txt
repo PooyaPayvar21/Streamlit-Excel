@@ -1,0 +1,7 @@
+README.md
+main.py
+pyproject.toml
+streamlit_excel.egg-info/PKG-INFO
+streamlit_excel.egg-info/SOURCES.txt
+streamlit_excel.egg-info/dependency_links.txt
+streamlit_excel.egg-info/top_level.txt
