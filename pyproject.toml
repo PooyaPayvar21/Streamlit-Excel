@@ -5,5 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
-authors = ["pooya.payvar21@gmail.com"]
+authors = [
+    { name = "Pooya Payvar", email = "pooya.payvar21@gmail.com" }
+]
 package-mode = false
