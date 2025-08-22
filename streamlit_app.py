@@ -7,19 +7,19 @@ def save_to_excel(data):
     """Save data to an Excel file"""
     filename = 'data.xlsx'
 
-    # اگر فایل وجود دارد، به آن اضافه می کند
     if os.path.exists(filename):
         try:
-            existing_df = pd.read_excel(filename)
-            # اضافه کردن داده جدید
+            existing_df = pd.read_excel(filename)  # ✅ load as DataFrame
             new_df = pd.concat([existing_df, pd.DataFrame([data])], ignore_index=True)
-        except :
+        except Exception as e:
+            print("Error reading existing file:", e)
             new_df = pd.DataFrame([data])
     else:
         new_df = pd.DataFrame([data])
 
     new_df.to_excel(filename, index=False)
     return f"Data saved to {filename}"
+
 
 def main():
     st.set_page_config (
